@@ -1,4 +1,12 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
+import { Auth } from '../auth/auh.decorator';
 
 @Controller('users')
-export class UsersController {}
+export class UsersController {
+
+  @Get('/me')
+  async getMe(@Auth() { userId }) {
+
+  }
+
+}
